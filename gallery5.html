@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور - شاليهات أشرقت</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #A0522D;
+            --bg-color: #FBF8F4;
+            --text-dark: #333;
+        }
+
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            background: var(--bg-color); 
+            margin: 0; 
+            padding: 20px; 
+            color: var(--text-dark);
+        }
+
+        /* تنسيق الهيدر والمعلومات */
+        .header-section {
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .back-btn { 
+            display: inline-block; 
+            margin-bottom: 20px; 
+            padding: 8px 25px; 
+            background: var(--primary-color); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 50px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .back-btn:hover { background: #804020; transform: scale(1.05); }
+
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            padding: 15px;
+            background: #a0512d15;
+            border-radius: 15px;
+            border: 1px solid #a0512d30;
+        }
+
+        /* سحر الجاليري (CSS Grid) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-card { 
+            background: white; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            height: 250px; /* توحيد الارتفاع */
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .gallery-card img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; /* لضمان عدم تشوه الصور */
+            cursor: pointer;
+        }
+
+        h1 { color: var(--primary-color); font-weight: 700; }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <a href="index.html" class="back-btn">← العودة للرئيسية</a>
+        
+        <h1>تفاصيل الوحدة</h1>
+        <div class="info-card">
+            <div class="info-item"><strong>3 غرف</strong></div>
+            <div class="info-item"><strong>1 حمام</strong></div>
+            <div class="info-item"><strong>مطبخ مجهز</strong></div>
+            <div class="info-item"><strong>2 تكييف</strong></div>
+            <div class="info-item"><strong>تراس كبير</strong></div>
+        </div>
+    </div>
+
+    <h1>معرض الصور</h1>
+
+    <div class="gallery-grid">
+        <div class="gallery-card">
+            <img src="WhatsApp Image 2025-12-16 at 10.21.44 PM.jpeg" alt="صورة الشاليه">
+        </div>
+        <div class="gallery-card">
+            <img src="WhatsApp Image 2025-12-16 at 10.23.22 PM.jpeg" alt="صورة الشاليه">
+        </div>
+        <div class="gallery-card">
+            <img src="WhatsApp Image 2025-12-16 at 10.23.25 PM.jpeg" alt="صورة الشاليه">
+        </div>
+        <!-- تقدر تضيف صور تانية هنا وهتترتب لوحدها -->
+    </div>
+
+</body>
+</html>
